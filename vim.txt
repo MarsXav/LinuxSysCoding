@@ -1,0 +1,36 @@
+kjhl : up down left right
+i : insert mode
+dd : delete or cut
+G : go to bottom
+gg : go to top
+} : go to end of the block
+{ : begin of the block
+u : undo change
+ctrl R : redo
+yy : copy line
+p : paste below
+V : visual mode
+o : new line below + enter insert mode
+O : new line above 
+w : next word
+b : last word
+0 : begin of the line
+$ : end of the line
+W : next word - ignore punctuation
+B : last word - ignore punctuation
+t : go to ""
+% : go to the closed adjacent  bracket
+c : change word
+C : delete right hand of the line + i
+t : until
+* : next same envolked command
+; : next instance
+z : next bracket
+A : end of the sentence + insert
+x : delete letter on cursor
+I : insert at begining of the line
+~ : transform captical to lower vice versa
+. : paste  last command
+r : replace letter
+> : tab
+q : record commands @ : assign to a key
