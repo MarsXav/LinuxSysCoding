@@ -1,0 +1,6 @@
+Create a static lib steps
+1 gcc -c <file_name.c>// compile .c/c++  files to generate .o files
+2 ar rcs lib<name>.a <file_name.o>
+3 cp lib<name>.a to the lib directory
+4 gcc <file_name.c> -o <program name> -I ./include/ -l lib<name> -L./lib
+
