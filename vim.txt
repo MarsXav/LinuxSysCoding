@@ -13,7 +13,7 @@ V : visual mode
 o : new line below + enter insert mode
 O : new line above 
 w : next word
-b : last word
+b : previous word
 0 : begin of the line
 $ : end of the line
 W : next word - ignore punctuation
