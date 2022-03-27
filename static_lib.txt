@@ -1,6 +1,15 @@
 Create a static lib steps
+Source files -> preprocessing -> compile -> scripting -> build link
 1 gcc -c <file_name.c>// compile .c/c++  files to generate .o files
-2 ar rcs lib<name>.a <file_name.o>
+2 create lib file:
+	ar rcs lib<name>.a <file_name.o>
 3 cp lib<name>.a to the lib directory
-4 gcc <file_name.c> -o <program name> -I ./include/ -l lib<name> -L./lib
+4 gcc <file_name.c> -o <program name> -I ./include/ -l lib<name> -L./lib //-L assign lib path; -l assign lib name; -I assign head file path
 
+Advantages of static lib:
+high speed loading time
+no supply of static lib needed when publishing
+
+Disadvantages of static lib:
+Consumes system's resources, waste memory
+Hard to update, employ and publish
