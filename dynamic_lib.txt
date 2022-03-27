@@ -13,3 +13,12 @@
 	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
 7 vim .bashrc && G && o export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
 8 sudo vim /etc/profile/
+
+Advantages of dynamic lib:
+Shared library
+Easy to update, employ and publish
+Able to control when to load dynamic lib
+
+Disadvantages
+Slower to load
+Rely on file when publishing
