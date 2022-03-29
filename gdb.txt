@@ -1,0 +1,29 @@
+Steps:
+1 gcc -g -Wall program.c -o program
+2 gdb program //enter gdb mode
+3 set args <param..>
+4 quit
+
+Common commands:
+list/l <file_name,number of lines>
+list/<function name>
+show listsize 
+set listsize <number of list>
+break <line number> //add break points
+info break //get break information
+delete/d <break number>
+disable <break number>
+enable <break number>
+break <line number> if <condition>
+
+Debug commands
+start
+run
+continue
+n/next //execute next line
+print <variable name>
+until//execute until the end of the loop
+step
+display
+set var
+finish //exit function
