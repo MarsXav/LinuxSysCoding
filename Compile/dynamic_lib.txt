@@ -1,0 +1,24 @@
+1 Create .o file from gcc
+	gcc -c -fpic/-fPIC *.c 
+	//fpic generate target code irrelevant to directory
+2 Obtain dynamic lib from gcc
+	gcc -shared *.o -o libabc.so
+3 Copy .so file to ./lib 
+	cp ../abc/libabc.so ./lib
+4 gcc main.c -o <exe_name> -I include/ -L lib/ -l abc
+
+5 Check the reliability of the dynamic lib and exe
+
+6 configue environment
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
+7 vim .bashrc && G && o export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
+8 sudo vim /etc/profile/
+
+Advantages of dynamic lib:
+Shared library
+Easy to update, employ and publish
+Able to control when to load dynamic lib
+
+Disadvantages
+Slower to load
+Rely on file when publishing
