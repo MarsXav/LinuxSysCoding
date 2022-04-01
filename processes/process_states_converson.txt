@@ -1,0 +1,15 @@
+1 processing states
+	three basic states: ready state, running state and blocked state
+	fve-state model includes: create new state, ready state, running state, blocked state and ending state
+	Running state: the cpu is running
+	ready state: the process can be run but waiting for the system to allocate cpu
+	blocked state: the process cannot be run, is waiting for some event to finish
+	create new state: when the process is just created, not yet placed into the queue
+	ending state: when process finished or aborded or aborded by OS
+2 Process related commands
+	ps aus/ajx -a/-u/-x/-j
+	top -
+3 PID and related functions
+	pid_t getpid(void);
+	pid_t getppid(void);
+	pid_t getpgid(pid_t pid);
