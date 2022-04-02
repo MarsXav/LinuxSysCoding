@@ -1,12 +1,18 @@
 #include <sys/types.h>
-#include <unistd.h?
+#include <unistd.h>
 #include <stdio.h>
 
 /*
  * pid_t fork(void);
  * function: create child process
  * return: PID o the child process will be returned in mother process, child process returns 0. returns -1 in mother process on fail.
- *
+ * relationship between parent and child process
+ * 	1 return values vary
+ * 	2 pcb vary: pid ppid signalset
+ * common aspects of parent and child process:
+ * 	1 before execution of the child process, the data in the user interface is the same
+ * 	2 file descriptor is the same
+ * the loal variables are not correlated
  */
 
 int main() {

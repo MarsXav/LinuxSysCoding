@@ -27,3 +27,10 @@ step
 display
 set var
 finish //exit function
+
+Multiprocess dubugging
+1 set debug parent or child process: set follow-fork-mode <parent | child>
+2 set debug mode: set detach-on-fork <on | off>, when on, other processes proceed simutaneously with the current process, when off, other processes are set on hol
+3 to view the debugging process: info inferiors
+4 to select debug process: inferior <id>
+5 detach the process from gdb: detach inferiors <id>
