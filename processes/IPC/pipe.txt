@@ -1,0 +1,7 @@
+Characteristics of pipes
+
+	Pipes are buffers in kernal memory
+	Pipes have characteristics of files
+	One pipe is a byte stream
+	Data transfer is unidirectional
+	annonymous pipes can only use in processes with common ancestors

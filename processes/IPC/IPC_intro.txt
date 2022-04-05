@@ -1,0 +1,12 @@
+Objective of IPC:
+1 data transfer: transfer data to another process
+2 notification
+3 share resources: kernal needs to provide mutex and synchronisation
+4 process control
+
+Linux IPC method
+IPC of the same host: 
+	Unix IPC: annoymous pipe, nonannonymous pipe, signal
+	Systm V IPC }
+	POSIX IPC   }: notification queue, shared memory, semaphore
+IPC of different hosts: Socket
