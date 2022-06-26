@@ -2,6 +2,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
  * pid_t waitpid(pid_t pid, int *wstatus, int options);
@@ -21,24 +22,25 @@ int main(){
         // create 5 child processes;
         pid_t pid;
         for (int i = 0; i < 5; i++){
+		pid = fork();
                 if (pid == 0){
                 break;
                 }
         }
         if (pid > 0){//parent process
                 while(1){
-			sleep(1);
-                        printf("parent, pid: %d", getpid());
+			printf("parent, pid = %d\n",getpid());
 			int status;
+			sleep(1);
                         int ret = waitpid(-1,&status,WNOHANG);//parent process blocks here;
                         if (ret == -1) break;
-			if (ret == 0) continue;
+			else if (ret == 0) continue;
 			else if (ret > 0){
 				if(WIFEXITED(status)){
-					printf("exit number: %d\n",WEXITSTATUS(st));
+					printf("exit number: %d\n",WEXITSTATUS(status));
 				}
-				if(WIFSIGNALED(st)){
-					printf("signal interupted:%d\n",WTERMSIG(st));
+				if(WIFSIGNALED(status)){
+					printf("signal interupted:%d\n",WTERMSIG(status));
 				}
 
 				printf("Child killd, pid = %d\n", ret);
@@ -47,9 +49,10 @@ int main(){
         }
         else if (pid == 0){//child process
                 while(1){
-                        prinf("child,pid: %d",getpid());
+                        printf("child,pid: %d",getpid());
                         sleep(1);
                 }
+		exit(0);
         }
 	return 0;
 }
