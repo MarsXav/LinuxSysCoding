@@ -7,7 +7,7 @@
 /*
  * int pipe (int pipefd[2]);
  * 	function: create a annonymous pipe to communicate between processes
- * 	parameters: int pipefd[2], which serves as a output parameer
+ * 	parameters: int pipefd[2], which serves as a output parameter
  * 		pipefd[0] refers to read end of the pipe
  * 		pipefd[1] refers to write end
  * 	return: on success returns 0, -1 on fail
