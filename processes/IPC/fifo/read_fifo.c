@@ -14,7 +14,7 @@ int main(){
 		char buf[1024] = {0};
 		int len = read(fd, buf, sizeof(buf));
 		if (len == 0){
-			printf("NO data to read");
+			printf("write end disconnects\n");
 			break;
 		}
 		printf("receive buf: %s\n", buf);
