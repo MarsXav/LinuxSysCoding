@@ -1,0 +1,23 @@
+1. Can we ++ return value of mmap? after doing so, can we munmap it?
+void *ptr = mmap(...);
+Yes, we can, but not suggested. munmap cannot be achieved, address must be cached
+
+2. When open with O_RDONLY, if mmap with PROT_READ | PROT_WRITE, what will hapen?
+Error, return MAP_FAILED. open() limit is suggested to be aligned with mmap's limit.
+
+3. What will happen if offset is set 1000?
+Offset must be integer times 4k. Return MAP_FAILED
+
+4. When will mmap fail
+	length = 0;
+	prot: PROT_WRITE only; limits differs from open()
+
+5. Can we create a new file with open(..,O_CREAT)?
+Yes, but the size of the file cannot be 0. Operations like lseek/truncate can be used
+
+6. What will happen if close(fd) after mmap?
+Nothing will happen, mapping area still exists, only fd closes.
+
+7. What will happen if we operate ptr with exceeded limit?
+void *ptr = mmap(NULL, 100000,,,);
+Segment error 
