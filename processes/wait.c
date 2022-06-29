@@ -16,6 +16,7 @@ int main(){
 	// create 5 child processes;
 	pid_t pid;
 	for (int i = 0; i < 5; i++){
+		pid = fork();
 		if (pid == 0){
 		break;
 		}
@@ -33,8 +34,9 @@ int main(){
 	}
 	else if (pid == 0){
 		while(1){
-			prinf("child,pid: %d",getpid());
+			printf("child, pid: %d\n",getpid());
 			sleep(1);
 		}
 	}
+	return 0;
 }
