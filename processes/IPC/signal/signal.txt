@@ -1,0 +1,9 @@
+Singal macros
+2 SIGINT Terminate process ctrl+c
+3 SIGQUIT Terminate process ctrl+\
+9 SIGKILL Unconditionally terminate process, cannot be ignored, processed or blocked
+11 SIGSEGV Segment error terminate process and generate core file
+13 SIGPIPE Terminate process Pipe broken
+17 SIGCHLD Ignore the signal When child process ends, parent process receives this signal
+18 SIGCONT If process ends, make it continue running
+19 SIGSTOP Stop process from proceeding, cannot be ignored, processed or blocked 
