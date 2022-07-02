@@ -1,0 +1,12 @@
+1. When user uses ctrl^c, signal 2 SIGINT is created
+2. Signal created but unsettled:
+	All unhandled signal is stored in unsettled signal set
+	SIGINT signal is stored in the second marked position
+		If the position has value 0, the signal is not unsettled
+		If the position has value 1, the signal is unsettled
+3. Unsettled signal needs to be handled, before handling, the signal needs to be compared with the blocked signal set
+	The blocked signal set does not block any signal on default
+	If require to block some signals, user needs to apply system's API
+4. When handling signal, corresponding block signal set is compared to check if the signal is blocked
+	If unblocked, signal will be handled
+	If blocked, signal will remain in unsettled until unblock
