@@ -1,0 +1,5 @@
+1. fork(), then exit parent process, continue running child process
+2. setsid() to create a new session with child process to eliminate the control terminal
+3. clear umask
+4. modify the current working directory, normally set to root directory
+5. close all fd inherited from parent processes
