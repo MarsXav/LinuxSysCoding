@@ -1,0 +1,4 @@
+Conditions of lock generation:
+1. forget to unlock
+2. repeatly lock
+3. multiple threads with multiple locks to take the lock resources
