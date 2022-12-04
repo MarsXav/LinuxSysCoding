@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-/* off_t lseet(int fd, off_t offset, int whence);
+/* off_t lseek(int fd, off_t offset, int whence);
  * whence:
  * 	SEEK_SET: set the offset of the file pointer
  * 	Seek_CUR: set the offset: current positionn + the second param offset
@@ -17,7 +17,7 @@
  * 	3 Obtain file length
  * 		lseek(fd,0,SEEK_END);
  * 	4 extend file length
- * 		lseed(fd,<bytes extended>,SEEK_END)
+ * 		lseek(fd,<bytes extended>,SEEK_END)
  *
  */
 int main(){
